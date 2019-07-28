@@ -9,7 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 //MOngodb connect
-mongoose.connect('mongodb://localhost:3000/graphql', { promiseLibrary: require('bluebird'), useNewUrlParser: true })
+mongoose.connect('mongodb+srv://suraj:5uraj$ingh@suraj-3elfs.mongodb.net/test?retryWrites=true&w=majority', { promiseLibrary: require('bluebird'), useNewUrlParser: true })
   .then(() =>  console.log('connection successful'))
   .catch((err) => console.error(err));
 
