@@ -30,6 +30,11 @@ app.use('/graphql', cors(), graphqlHTTP({
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.use(express.static('public'));
+app.get( '*', (req,res) => {
+  res.sendFile(path.resolve(__dirname,'public','index.html'));
+});
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
