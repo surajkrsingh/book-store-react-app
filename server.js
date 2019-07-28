@@ -9,9 +9,9 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 //MOngodb connect
-mongoose.connect('mongodb://localhost/node-graphql', { promiseLibrary: require('bluebird'), useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:3000/graphql', { promiseLibrary: require('bluebird'), useNewUrlParser: true })
   .then(() =>  console.log('connection successful'))
-  .catch((err) => console.error('sssssss'));
+  .catch((err) => console.error(err));
 
 var app = express();
 
