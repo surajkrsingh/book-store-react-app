@@ -17,7 +17,7 @@ var app = express();
 
 //GraphQL
 var graphqlHTTP = require('express-graphql');
-var schema = require('./graphql/bookSchemas');
+var schema = require('graphql/bookSchemas');
 var cors = require("cors");
 app.use('*', cors());
 app.use('/graphql', cors(), graphqlHTTP({
