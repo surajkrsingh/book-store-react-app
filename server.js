@@ -4,14 +4,18 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('app');
 var debug = require('debug')('server:server');
 var http = require('http');
+const path = require('path');
 
+app.use(express.static('public'));
+app.get('*',(req,res) => {
+	res.sendFile(path.resolve(__dirname, 'public', 'index.html' ));
+});
 /**
  * Get port from environment and store in Express.
  */
-
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 

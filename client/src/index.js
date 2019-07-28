@@ -11,7 +11,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
  * Apollo client which request to the graphQL server for the data according our query.
  */
 const client = new ApolloClient( {
-	uri: "http://localhost:3000/graphql"	
+	uri: "/graphql"	
 } );
 
 
