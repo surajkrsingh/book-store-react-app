@@ -1,3 +1,3 @@
 #### Start server
 
-```node ./bin/wwww ```
+```node server.js ```
